@@ -1,6 +1,10 @@
 <template>
     <div>
       <Bars />
-      <slot />
+      <main>
+        <!--Card /-->
+        <slot />
+      </main>
+        <Footer />
     </div>
   </template>
