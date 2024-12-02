@@ -70,9 +70,8 @@
         <v-card-text class="text-center">
           <a
             class="text-blue text-decoration-none"
-            href="#"
-            rel="noopener noreferrer"
-            target="_blank"
+            href="/register"
+            to="noopener noreferrer"
           >
             REGÍSTRATE <v-icon icon="mdi-chevron-right"></v-icon>
           </a>
