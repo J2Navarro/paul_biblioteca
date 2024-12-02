@@ -1,13 +1,20 @@
 <template>
     <v-container>
         <v-row justify="space-around">
-    <v-card
-      class="mx-auto my-8"
-      elevation="16"
-      max-width="250"
-    >
-      <v-card-item>
-        <h2 class="text-center text-h5 font-weight-black text-brown-darken-3">LIBROS</h2>
+          <v-hover v-slot="{ isHovering, props }" open-delay="200">
+          <v-card
+              href="/books"
+              class="mx-auto my-8"
+              :class="{ 'on-hover': isHovering }"
+              :elevation="isHovering ? 19 : 2"      
+              max-width="500"
+              max-height="500"
+              v-bind="props"
+            >
+            
+             
+             <v-card-item>
+         <h2 class="text-center text-h5 font-weight-black text-brown-darken-3">LIBROS</h2>
       </v-card-item>
       
             <v-row class="ma-2">
@@ -19,11 +26,16 @@
           <v-img class="ma-2" width="50" height="100" src="https://images.cdn1.buscalibre.com/fit-in/360x360/cd/83/cd83064665e73f29b479105109608cdd.jpg" cover></v-img>
         </v-row>
     </v-card>
-    <v-card
-      class="mx-auto my-8"
-      elevation="16"
-      max-width="250"
-    >
+  </v-hover>
+  <v-hover v-slot="{ isHovering, props }" open-delay="200">
+          <v-card
+              class="mx-auto my-8"
+              :class="{ 'on-hover': isHovering }"
+              :elevation="isHovering ? 19 : 2"      
+              max-width="5000"
+              max-height="5000"
+              v-bind="props"
+            >
       <v-card-item>
         <h2 class="text-center text-h5 font-weight-black text-brown-darken-3">ENSAYOS</h2>
       </v-card-item>
@@ -37,11 +49,16 @@
           <v-img class="ma-2" width="50" height="100" src="https://books.google.es/books/content?id=VvkWGaupxW8C&hl=es&pg=PP1&img=1&zoom=3&sig=ACfU3U3n_fSN7Wtg-RYF45PiDTxfQCt0sg&w=1280" cover></v-img>
         </v-row>
     </v-card>
-    <v-card
-      class="mx-auto my-8"
-      elevation="16"
-      max-width="250"
-    >
+  </v-hover>
+    <v-hover v-slot="{ isHovering, props }" open-delay="200">
+          <v-card
+              class="mx-auto my-8"
+              :class="{ 'on-hover': isHovering }"
+              :elevation="isHovering ? 19 : 2"      
+              max-width="5000"
+              max-height="5000"
+              v-bind="props"
+            >
       <v-card-item>
         <h2 class="text-center text-h5 font-weight-black text-brown-darken-3">PROYECTOS</h2>
       </v-card-item>
@@ -55,6 +72,7 @@
           <v-img class="ma-2" width="50" height="100" src="https://d20ohkaloyme4g.cloudfront.net/img/document_thumbnails/ed8ae41eff52b18b0c62860f6f341160/thumb_300_424.png" cover></v-img>
         </v-row>
     </v-card>
+  </v-hover>
 </v-row>
 </v-container>
   </template>
