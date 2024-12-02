@@ -1,6 +1,6 @@
 <template>
-    <h1>Principal</h1>
-    <Products  />    
+    <Card />
+    
 </template>
 <script setup>
   // Instanciar el store
