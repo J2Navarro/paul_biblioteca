@@ -1,22 +1,33 @@
 <template>
+    
+    <v-row align="center" justify="center">
+
     <div>
-        <h1>Productos</h1>
+        <h1>LIBROS</h1>
+        
         <div v-if="getProducts.length">
-            <ul >
+            <ul>
                 <li v-for="product in getProducts" :key="product.id">
-                <h2>{{ product.title }}</h2>
-                <p>{{ product.description }}</p>
-                <strong>{{ product.price }} USD</strong>
+                    <h2>{{ product.title }}</h2>
+                    <p>{{ product.description }}</p>
+                    <strong>{{ product.price }} USD</strong>
                 </li>
             </ul>
         </div>
-    </div>    
+ 
+    </div>  
+</v-row>  
 </template>
-<script setup>
-    // Instanciar el store
-  const productStore = useProductStore()
-  
-  // Obtener los productos
-  const { getProducts } = productStore;
 
+<script setup>
+    import { onMounted } from 'vue';
+    const productStore = useProductStore();
+
+    // Obtener los productos del store
+    const { getProducts, fetchProducts } = productStore;
+
+    // Cargar los productos cuando el componente se monta
+    onMounted(() => {
+        fetchProducts();  // Llama a la acción para obtener los productos
+    });
 </script>
